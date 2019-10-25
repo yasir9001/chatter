@@ -1,0 +1,48 @@
+.user-window-wraper {
+  border: 1px solid green;
+  flex: 2;
+
+  .user-window-wrapper {
+    background: #f7f5f5;
+    padding: 10px 10px;
+  }
+
+  .search-bar {
+    background: rgba(247, 243, 243, 0.404);
+    padding: 10px 10px;
+
+    > div {
+      display: flex;
+      border-radius: 3rem;
+      background: #ffffff;
+      overflow: hidden;
+
+      .search-input {
+        width: 100%;
+        flex: 1;
+
+        input {
+          border: none;
+          outline: none;
+          padding: 10px 30px 10px 10px;
+          font-weight: 500;
+          width: 100%;
+        }
+      }
+
+      .mg-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+      }
+    }
+  }
+}
+
+.user-window-wraper {
+  .chat-thumb {
+      border:1px solid red;
+      display: flex;
+  }
+}

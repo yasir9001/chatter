@@ -1,10 +1,13 @@
 import React from 'react';
-import './App.scss';
+import './assets/scss/base.scss';
+
+import MainScreen from './components/main-screen/MainScreen'
 
 function App() {
   return (
-    <div className="">
-    </div>
+    <>
+      <MainScreen />
+    </>
   );
 }
 
