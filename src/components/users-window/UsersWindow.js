@@ -13,7 +13,21 @@ export class UsersWindow extends Component {
                     <UserWindowHeader />
                     <SearchBar />
 
-                    <div className="chats">
+                    <div className="recent-chats">
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
+                        <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
                         <ChatThumb  avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM"/>
                     </div>
                 </div>

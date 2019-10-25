@@ -1,5 +1,4 @@
 .user-window-wraper {
-  border: 1px solid green;
   flex: 2;
 
   .user-window-wrapper {
@@ -41,8 +40,37 @@
 }
 
 .user-window-wraper {
+  .recent-chats {
+    overflow: auto;
+    height: 84vh;
+  }
   .chat-thumb {
-      border:1px solid red;
+    display: flex;
+    padding: 15px 15px;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      background: rgba(182, 179, 179, 0.404);
+    }
+    .content {
+      &::after {
+        content: "";
+        border-bottom: 1px solid #f7f5f5;
+        width: 80%;
+        position: absolute;
+        bottom: 0;
+      }
+      flex: 1;
       display: flex;
+      justify-content: space-between;
+      .name {
+        margin-left: 20px;
+        font-size: 24px;
+        columns: #000000;
+        font-weight: 500;
+      }
+      .time {
+      }
+    }
   }
 }

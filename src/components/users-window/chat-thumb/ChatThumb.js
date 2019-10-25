@@ -11,8 +11,8 @@ export class ChatThumb extends Component {
                     <Avatar src={avatar} size={52} />
                 </div>
                 <div className="content">
-                    <div>{name}</div>
-                    <div>{time}</div>
+                    <div className="name">{name}</div>
+                    <div className="time">{time}</div>
                 </div>
             </div>
         )
