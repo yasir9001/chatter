@@ -4,7 +4,7 @@ import { Avatar } from 'antd'
 
 export class ChatThumb extends Component {
     render() {
-        const { avatar, name, time } = this.props;
+        const { avatar, name, time } = this.props.data;
         return (
             <div className="chat-thumb">
                 <div className="avatar">

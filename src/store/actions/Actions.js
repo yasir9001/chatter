@@ -1,13 +1,14 @@
 import {
-    CHANGE_TEXT
+    SHOW_CHAT
 } from '../constants'
 
 
 export default class Actions {
 
-    static ChangeText(data) {
+    static showChat(data) {
+        // console.log('ds',data)
         return {
-            type: CHANGE_TEXT,
+            type: SHOW_CHAT,
             payload: data
         }
     }

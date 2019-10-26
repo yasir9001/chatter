@@ -6,32 +6,70 @@ import SearchBar from './search-bar/SearchBar'
 import ChatThumb from './chat-thumb/ChatThumb'
 
 import { connect } from "react-redux"
-// import { MainMiddleware } from './../../store/middlewares'
+import { Actions } from './../../store/actions'
 
 class UsersWindow extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: [
+                {
+                    avatar: 'https://picsum.photos/200/300?random=1',
+                    name: 'Kiran khan',
+                    time: '2 AM'
+                },
+                {
+                    avatar: 'https://picsum.photos/200/300?random=1',
+                    name: 'Lol',
+                    time: '2 AM'
+                },
+                {
+                    avatar: 'https://picsum.photos/200/300?random=1',
+                    name: 'CI CD',
+                    time: '2 AM'
+                },
+                {
+                    avatar: 'https://picsum.photos/200/300?random=1',
+                    name: 'Iqra Muneer',
+                    time: '2 AM'
+                },
+                {
+                    avatar: 'https://picsum.photos/200/300?random=1',
+                    name: 'Bhai Log',
+                    time: '2 AM'
+                },
+                {
+                    avatar: 'https://picsum.photos/200/300?random=1',
+                    name: 'Yasir Hussain',
+                    time: '2 AM'
+                },
+                {
+                    avatar: 'https://picsum.photos/200/300?random=1',
+                    name: 'Yasir Hussain',
+                    time: '2 AM'
+                },
+
+            ]
+        }
+    }
     render() {
+        console.log(this.props.currentUserChat)
+        const { data } = this.state;
         return (
             <div className="user-window-wraper">
                 <div className="user-window">
                     <UserWindowHeader />
                     <SearchBar />
-
                     <div className="recent-chats">
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="DJ Khalid" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Jhon cena" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Mali Boy" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Shit lady" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM" />
-                        <ChatThumb avatar={'https://cdn.pixabay.com/photo/2014/05/03/00/50/flower-child-336658_960_720.jpg'} name="Abou Sin" time="2 AM" />
+                        {
+                            data.map((e, i) => {
+                                return (
+                                    <div onClick={() => this.props.showChat(e)} key={i}>
+                                        <ChatThumb data={e} />
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
@@ -42,12 +80,12 @@ class UsersWindow extends Component {
 
 const mapStateToProps = (state) => {
     return {
-
+        currentUserChat: state.Main.currentUserChat
     }
 };
 const mapDispatchToProps = (dispatch) => {
     return {
-
+        showChat: (e) => dispatch(Actions.showChat(e))
     }
 }
 

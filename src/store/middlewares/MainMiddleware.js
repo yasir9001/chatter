@@ -1,11 +1,11 @@
-import { Actions } from '../actions';
+// import { Actions } from '../actions';
 
-export default class MaunMiddleware {
+// export default class MaunMiddleware {
 
-    static ChangeText(payload) {
-        return (dispatch) => {
-            dispatch(Actions.ChangeText(payload))
-        }
-    }
+//     static ChangeText(payload) {
+//         return (dispatch) => {
+//             dispatch(Actions.ChangeText(payload))
+//         }
+//     }
 
-}
+// }
