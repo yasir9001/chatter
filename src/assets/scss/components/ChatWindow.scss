@@ -35,7 +35,25 @@
   flex-direction: column;
   .chat-wrapper {
     flex: 1;
-    border:1px solid red;
+    padding: 0px 10%;
+    .message-wrapper {
+      display: flex;
+      // justify-content: flex-end;
+      //  border:1px solid red;
+      .message{
+        padding: 5px 8px;
+        border-radius: 8px;
+        margin-bottom: 3px;
+        border: 1px solid #cccccc;
+      }
+    }
+    .sent{
+      background: lightcoral;
+      margin-left: auto;
+    }
+    .received{
+      text-align: left;
+    }
   }
   .input-box {
     background: rgba(247, 243, 243, 0.404);
